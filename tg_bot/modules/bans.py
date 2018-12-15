@@ -28,7 +28,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("You don't seem to be referring to a user.")
+        message.reply_text("What a Noob...You have to reffering to a user.")
         return ""
 
     try:
@@ -91,7 +91,7 @@ def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("You don't seem to be referring to a user.")
+        message.reply_text("What a Noob...You have to reffering to a user.")
         return ""
 
     try:
@@ -104,7 +104,7 @@ def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
             raise
 
     if is_user_ban_protected(chat, user_id, member):
-        message.reply_text("I really wish I could ban admins...")
+        message.reply_text("I really wish I could ban noob-admins...")
         return ""
 
     if user_id == bot.id:
