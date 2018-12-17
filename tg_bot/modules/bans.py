@@ -28,7 +28,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("What a Noob...You have to reffering to a user.")
+        message.reply_text("What a Noob!...You have to reffering to a user.")
         return ""
 
     try:
@@ -61,13 +61,13 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
     try:
         chat.kick_member(user_id)
         bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
-        message.reply_text("Banned! Go away Idiot")
+        message.reply_text("Banned! Go away Idiot!")
         return log
 
     except BadRequest as excp:
         if excp.message == "Reply message not found":
             # Do not reply
-            message.reply_text('Banned! Go away Idiot', quote=False)
+            message.reply_text('Banned! Go away Idiot!', quote=False)
             return log
         else:
             LOGGER.warning(update)
@@ -91,7 +91,7 @@ def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("What a Noob...You have to reffering to a user.")
+        message.reply_text("What a Noob!...You have to reffering to a user.")
         return ""
 
     try:
@@ -108,7 +108,7 @@ def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
         return ""
 
     if user_id == bot.id:
-        message.reply_text("I'm not gonna BAN myself, are you crazy?")
+        message.reply_text("I'm not gonna BAN myself, are you crazy?!")
         return ""
 
     if not reason:
