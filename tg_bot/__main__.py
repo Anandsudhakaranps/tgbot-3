@@ -21,7 +21,7 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 PM_START_TEXT = """
 Hi {}, my name is {}!
 
-I'm a group manager bot maintained by [🇩🇪爪尺.几ㄖ乃ㄖᗪㄚ <卩爪=乃卂几 >](tg://user?id={}).
+I'm a group manager bot maintained by [@Anand_VFC](tg://user?id={}).
 
 You can find the list of available commands with /help.
 
